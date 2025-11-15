@@ -1,0 +1,80 @@
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100px;
+  font-style: normal;
+}
+
+h1 {
+    padding-left: 20px;
+}
+
+.p-3 {
+    background-color: #234f75;
+}
+
+.navbar {
+    border-radius: 25px;
+    margin: 20px;
+    background-color: #163047;
+}
+
+.navbar-toggler {
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.navbar-brand {
+    padding: 20px;
+}
+
+.nav-item {
+    padding-right: 20px;
+}
+
+.immaturegoat {
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.speech-bubble {
+	position: absolute;
+    margin-top: 100px;
+    margin-left: 30px;
+	background: #00aabb;
+	border-radius: 25px;
+    display: inline-block;
+    padding: 30px;
+    max-width: 80vw;
+    box-sizing: border-box;
+    word-wrap: break-word; 
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+}
+
+.speech-bubble-text {
+    padding-left: 30px;
+}
+
+@media (max-width: 600px) {
+    .immaturegoat {
+        display: none;
+    }
+}
