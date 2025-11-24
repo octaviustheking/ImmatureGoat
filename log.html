@@ -48,8 +48,53 @@
         </div>
     </nav>
 
-    <p class="nothing hover-card">Nothing here... yet...</p>
+    <h1 class="log-title">Log</h1>
+
+    <div class="log-layout">
+
+    <aside class="log-sidebar">
+        <h2>Posts</h2>
+        
+        <h3>2025</h3>
+
+        <div class="month">
+            <button class="btn btn-link month-toggle" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#november25Posts" 
+                    aria-expanded="false" 
+                    aria-controls="november25Posts">
+                November <span class="arrow">▾</span>
+            </button>
+            <ul class="collapse month-posts" id="november25Posts">
+                <li><a href="#1">First Post</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="log-content">
+        <article class="log-card">
+            <h2 id="1">First Post</h2>
+            <h3>11/24/25</h3>
+            <p>Test post for the log... I think it looks good. </p>
+        </article>
+    </main>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.month-toggle').forEach(btn => {
+            const collapseId = btn.getAttribute('data-bs-target');
+            const collapseEl = document.querySelector(collapseId);
+
+            collapseEl.addEventListener('show.bs.collapse', () => {
+                btn.classList.add('open'); // rotate arrow up
+            });
+
+            collapseEl.addEventListener('hide.bs.collapse', () => {
+                btn.classList.remove('open'); // rotate arrow down
+            });
+        });
+    </script>
 </body>
 </html>
